@@ -1,6 +1,10 @@
-from django.shortcuts import render
-from django.http import JsonResponse
-from vote.models import Subject, Teacher
+from django.shortcuts import render, redirect
+from django.http import JsonResponse, HttpResponse
+from vote.models import Subject, Teacher, User
+from vote.form import RegisterForm, LoginForm
+from vote.captcha import Captcha
+import random
+
 # Create your views here.
 
 def show_subjects(request):
@@ -32,3 +36,47 @@ def praise_or_criticize(request):
     except (KeyError, ValueError, Teacher.DoseNotExist):
         data = {'code': 404, 'hint': '操作失败'}
     return JsonResponse(data)
+
+def register(request):
+    page, hint = 'register.html', ''
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        print('----', form)
+        if form.is_valid():
+            form.save()
+            page = 'login.html'
+            hint = '注册成功，请登录'
+        else:
+            hint = '请输入有效的注册信息'
+    return render(request, page, {'hint': hint})
+
+def login(request):
+    hint = ''
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = User.objects.filter(username=username, password=password).first()
+            if user:
+                return redirect('/')
+            else:
+                hint = '用户名或密码错误'
+        else:
+            hint = '请输入有效的登录信息'
+    return render(request, 'login.html', {'hint': hint})
+
+
+ALL_CHARS = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+
+def get_captcha_text(length=4):
+    selected_chars = random.choices(ALL_CHARS, k=length)
+    return ''.join(selected_chars)
+
+
+def get_captcha(request):
+    """获得验证码"""
+    captcha_text = get_captcha_text()
+    image = Captcha.instance().generate(captcha_text)
+    return HttpResponse(image, content_type='image/png')

@@ -17,12 +17,15 @@ from django.contrib import admin
 from django.urls import path, include
 
 from vote import views
-
+# 配置用户请求的URL和视图函数的对应关系
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hrs/', include('hrs.urls')),
+
     path('', views.show_subjects),
     path('teachers/', views.show_teachers),
     path('praise/', views.praise_or_criticize),
     path('criticize/', views.praise_or_criticize),
+    path('register/', views.register),
+    path('login/', views.login),
 ]

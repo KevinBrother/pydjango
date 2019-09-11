@@ -12,3 +12,9 @@ $ source venv/bin/activate　　
 
 退出虚拟环境  
 (venv)$ deactive　　
+
+
+deepin: 更新后需要执行：
+    虚拟环境中
+        python manage.py makemigrations vote
+        python manage.py migrate
