@@ -28,4 +28,5 @@ urlpatterns = [
     path('criticize/', views.praise_or_criticize),
     path('register/', views.register),
     path('login/', views.login),
+    path('captcha/', views.get_captcha),
 ]

@@ -3,6 +3,7 @@ from django.http import JsonResponse, HttpResponse
 from vote.models import Subject, Teacher, User
 from vote.form import RegisterForm, LoginForm
 from vote.captcha import Captcha
+from vote.utils import generate_captcha_code
 import random
 
 # Create your views here.
@@ -67,16 +68,8 @@ def login(request):
     return render(request, 'login.html', {'hint': hint})
 
 
-ALL_CHARS = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-
-
-def get_captcha_text(length=4):
-    selected_chars = random.choices(ALL_CHARS, k=length)
-    return ''.join(selected_chars)
-
-
 def get_captcha(request):
-    """获得验证码"""
-    captcha_text = get_captcha_text()
-    image = Captcha.instance().generate(captcha_text)
-    return HttpResponse(image, content_type='image/png')
+    code = generate_captcha_code()
+    request.session['captcha_code'] = code
+    image_data = Captcha.instance().generate(code, fmt='PNG')
+    return HttpResponse(image_data, content_type='image/png')

@@ -49,7 +49,8 @@ class Captcha(object):
 
     @classmethod
     def instance(cls, width=200, height=75):
-        prop_name = f'_instance_{width}_{height}'
+        # prop_name = f'_instance_{width}_{height}'
+        prop_name = '(_instance_%s_%s)' % (width, height)
         if not hasattr(cls, prop_name):
             setattr(cls, prop_name, cls(width, height))
         return getattr(cls, prop_name)

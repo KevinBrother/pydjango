@@ -16,5 +16,6 @@ $ source venv/bin/activate　　
 
 deepin: 更新后需要执行：
     虚拟环境中
+        pip install pillow
         python manage.py makemigrations vote
         python manage.py migrate

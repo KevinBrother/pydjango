@@ -1,17 +1,12 @@
 import random
-from vote.captcha import Captcha
-from django.http import HttpResponse
 
-ALL_CHARS = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+def generate_mobile_code(length=6):
+    """生成手机验证码字符串"""
+    select_nums = random.choice('0123456789')
+    return ''.join(select_nums)
 
 
-def get_captcha_text(length=4):
-    selected_chars = random.choices(ALL_CHARS, k=length)
+def generate_captcha_code(length=4):
+    """生成图片验证码字符串"""
+    selected_chars = random.choice('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz')
     return ''.join(selected_chars)
-
-
-def get_captcha(request):
-    """获得验证码"""
-    captcha_text = get_captcha_text()
-    image = Captcha.instance().generate(captcha_text)
-    return HttpResponse(image, content_type='image/png')
