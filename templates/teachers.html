@@ -42,11 +42,13 @@
                 let anchor = $(evt.target)
                 let url = anchor.attr('href')
                 $.getJSON(url, (json) => {
+                    alert(json.hint)
                     if (json.code == 200) {
                         let span = anchor.next()
                         span.text(parseInt(span.text()) + 1)
+                    }else{
+                        location.href = '/login/?backurl=' + location.href
                     }
-                    alert(json.hint)
                 })
             })
         })

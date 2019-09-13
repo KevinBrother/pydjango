@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from oa import settings
 
 from vote import views
 # 配置用户请求的URL和视图函数的对应关系
@@ -29,4 +30,13 @@ urlpatterns = [
     path('register/', views.register),
     path('login/', views.login),
     path('captcha/', views.get_captcha),
+    path('logout/', views.logout),
+    path('excel/', views.export_teachers_excel),
+    path('teachers_data/', views.get_teachers_data),
 ]
+
+if settings.DEBUG:
+
+    import debug_toolbar
+
+    urlpatterns.insert(0, path('__debug__/', include(debug_toolbar.urls)))

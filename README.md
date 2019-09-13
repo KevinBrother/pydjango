@@ -19,3 +19,7 @@ deepin: 更新后需要执行：
         pip install pillow
         python manage.py makemigrations vote
         python manage.py migrate
+
+46讲：　
+    日志信息的配置  
+    ORM操作优化  

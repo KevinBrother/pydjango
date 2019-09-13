@@ -1,0 +1,65 @@
+2019-09-13 13:28:15 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2019-09-13 13:28:26 autoreload.trigger_reload: /home/brother/Documents/oa/oa/settings.py changed, reloading.
+2019-09-13 13:28:27 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2019-09-13 13:36:22 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2019-09-13 13:36:43 basehttp.log_message: "GET / HTTP/1.1" 200 10179
+2019-09-13 13:36:43 basehttp.log_message: "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 14835
+2019-09-13 13:36:43 basehttp.log_message: "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13188
+2019-09-13 13:36:43 basehttp.log_message: "GET /static/images/hot.png HTTP/1.1" 304 0
+2019-09-13 13:36:43 basehttp.log_message: "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 41
+2019-09-13 13:36:43 basehttp.log_message: "GET /static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 200 404
+2019-09-13 13:36:43 basehttp.log_message: "GET /static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 200 882
+2019-09-13 13:37:04 basehttp.log_message: "GET /static/debug_toolbar/img/close.png HTTP/1.1" 200 498
+2019-09-13 13:37:04 basehttp.log_message: "GET /static/debug_toolbar/img/indicator.png HTTP/1.1" 200 436
+2019-09-13 13:37:04 basehttp.log_message: "GET /__debug__/render_panel/?store_id=0591846bba774aecb89f0cd6f6316a95&panel_id=HeadersPanel HTTP/1.1" 200 2847
+2019-09-13 13:37:06 basehttp.log_message: "GET /__debug__/render_panel/?store_id=0591846bba774aecb89f0cd6f6316a95&panel_id=RequestPanel HTTP/1.1" 200 2186
+2019-09-13 13:37:07 basehttp.log_message: "GET /__debug__/render_panel/?store_id=0591846bba774aecb89f0cd6f6316a95&panel_id=SQLPanel HTTP/1.1" 200 37882
+2019-09-13 13:37:07 basehttp.log_message: "GET /static/debug_toolbar/js/toolbar.sql.js HTTP/1.1" 200 121
+2019-09-13 13:37:15 basehttp.log_message: "GET /__debug__/render_panel/?store_id=0591846bba774aecb89f0cd6f6316a95&panel_id=StaticFilesPanel HTTP/1.1" 200 31271
+2019-09-13 13:37:18 basehttp.log_message: "GET /__debug__/render_panel/?store_id=0591846bba774aecb89f0cd6f6316a95&panel_id=TemplatesPanel HTTP/1.1" 200 4351
+2019-09-13 13:37:22 basehttp.log_message: "GET /__debug__/render_panel/?store_id=0591846bba774aecb89f0cd6f6316a95&panel_id=CachePanel HTTP/1.1" 200 811
+2019-09-13 13:37:26 basehttp.log_message: "GET /__debug__/render_panel/?store_id=0591846bba774aecb89f0cd6f6316a95&panel_id=VersionsPanel HTTP/1.1" 200 556
+2019-09-13 13:37:27 basehttp.log_message: "GET /__debug__/render_panel/?store_id=0591846bba774aecb89f0cd6f6316a95&panel_id=TimerPanel HTTP/1.1" 200 1303
+2019-09-13 13:37:27 basehttp.log_message: "GET /static/debug_toolbar/js/toolbar.timer.js HTTP/1.1" 200 2754
+2019-09-13 13:37:34 basehttp.log_message: "GET /__debug__/render_panel/?store_id=0591846bba774aecb89f0cd6f6316a95&panel_id=SettingsPanel HTTP/1.1" 200 24971
+2019-09-13 13:38:48 basehttp.log_message: "GET / HTTP/1.1" 200 10179
+2019-09-13 13:38:48 basehttp.log_message: "GET /static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 304 0
+2019-09-13 13:38:48 basehttp.log_message: "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+2019-09-13 13:38:48 basehttp.log_message: "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+2019-09-13 13:38:48 basehttp.log_message: "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+2019-09-13 13:38:56 log.log_response: Not Found: /execl
+2019-09-13 13:38:56 basehttp.log_message: "GET /execl HTTP/1.1" 404 12567
+2019-09-13 13:39:13 basehttp.log_message: "GET /excel HTTP/1.1" 301 0
+2019-09-13 13:39:13 basehttp.log_message: "GET /excel/ HTTP/1.1" 200 5632
+2019-09-13 13:39:20 basehttp.log_message: "GET /static/debug_toolbar/img/close.png HTTP/1.1" 304 0
+2019-09-13 13:39:20 basehttp.log_message: "GET /static/debug_toolbar/img/indicator.png HTTP/1.1" 304 0
+2019-09-13 13:39:20 basehttp.log_message: "GET /__debug__/render_panel/?store_id=78e4b9c1d4f349019a5eee349607b0b9&panel_id=SettingsPanel HTTP/1.1" 200 24971
+2019-09-13 13:39:22 basehttp.log_message: "GET /__debug__/render_panel/?store_id=78e4b9c1d4f349019a5eee349607b0b9&panel_id=HeadersPanel HTTP/1.1" 200 2837
+2019-09-13 13:39:30 basehttp.log_message: "GET /__debug__/render_panel/?store_id=78e4b9c1d4f349019a5eee349607b0b9&panel_id=RequestPanel HTTP/1.1" 200 2456
+2019-09-13 13:39:32 basehttp.log_message: "GET /__debug__/render_panel/?store_id=78e4b9c1d4f349019a5eee349607b0b9&panel_id=SQLPanel HTTP/1.1" 200 203
+2019-09-13 13:39:32 basehttp.log_message: "GET /static/debug_toolbar/js/toolbar.sql.js HTTP/1.1" 304 0
+2019-09-13 13:39:41 basehttp.log_message: "GET /__debug__/render_panel/?store_id=78e4b9c1d4f349019a5eee349607b0b9&panel_id=TemplatesPanel HTTP/1.1" 200 25927
+2019-09-13 13:45:56 autoreload.trigger_reload: /home/brother/Documents/oa/vote/views.py changed, reloading.
+2019-09-13 13:45:56 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2019-09-13 13:46:01 autoreload.trigger_reload: /home/brother/Documents/oa/vote/views.py changed, reloading.
+2019-09-13 13:46:02 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2019-09-13 13:46:38 log.log_response: Not Found: /execl
+2019-09-13 13:46:38 basehttp.log_message: "GET /execl HTTP/1.1" 404 12567
+2019-09-13 13:46:38 basehttp.log_message: "GET /static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 304 0
+2019-09-13 13:46:38 basehttp.log_message: "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+2019-09-13 13:46:38 basehttp.log_message: "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+2019-09-13 13:46:39 basehttp.log_message: "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+2019-09-13 13:46:41 log.log_response: Not Found: /execl
+2019-09-13 13:46:41 basehttp.log_message: "GET /execl HTTP/1.1" 404 12567
+2019-09-13 13:50:00 autoreload.trigger_reload: /home/brother/Documents/oa/vote/views.py changed, reloading.
+2019-09-13 13:50:00 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2019-09-13 13:50:18 autoreload.trigger_reload: /home/brother/Documents/oa/vote/views.py changed, reloading.
+2019-09-13 13:50:19 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2019-09-13 13:50:46 autoreload.trigger_reload: /home/brother/Documents/oa/vote/views.py changed, reloading.
+2019-09-13 13:50:46 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2019-09-13 13:53:32 autoreload.trigger_reload: /home/brother/Documents/oa/vote/views.py changed, reloading.
+2019-09-13 13:53:32 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2019-09-13 14:29:19 autoreload.trigger_reload: /home/brother/Documents/oa/oa/settings.py changed, reloading.
+2019-09-13 14:29:20 autoreload.run_with_reloader: Watching for file changes with StatReloader
+2019-09-13 14:29:35 autoreload.trigger_reload: /home/brother/Documents/oa/oa/settings.py changed, reloading.
+2019-09-13 14:29:35 autoreload.run_with_reloader: Watching for file changes with StatReloader

@@ -37,7 +37,8 @@ class RegisterForm(forms.ModelForm):
 class LoginForm(forms.Form):
     username = forms.CharField(min_length=4, max_length=20)
     password = forms.CharField(min_length=8, max_length=30)
-    captcha = forms.CharField(min_length=4, max_length=4)
+    # captcha = forms.CharField(min_length=4, max_length=4)
+    captcha = forms.CharField(max_length=4)
 
     def clean_username(self):
         username = self.cleaned_data['username']
