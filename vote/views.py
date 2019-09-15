@@ -1,3 +1,5 @@
+# utf-8
+
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
 from vote.models import Subject, Teacher, User
@@ -8,14 +10,32 @@ import random
 import xlwt
 from io import BytesIO
 from urllib.parse import quote
-
+from vote.mapper import SubjectMapper
 
 # Create your views here.
 
+# def show_subjects(request):
+#     """查看所有学科"""
+#     subjects = Subject.objects.all()
+#     return render(request, 'subject.html', {'subjects': subjects})
+
+# 前后端分离
 def show_subjects(request):
     """查看所有学科"""
-    subjects = Subject.objects.all()
-    return render(request, 'subject.html', {'subjects': subjects})
+    queryset = Subject.objects.all()
+    subjects = []
+    # for subject in queryset:
+    #     subjects.append({
+    #         'no': subject.no,
+    #         'name': subject.name,
+    #         'intro': subject.intro,
+    #         'isHot': subject.is_hot
+    #     })
+
+    for subject in queryset:
+        subjects.append(SubjectMapper(subject).as_dict())
+
+    return JsonResponse(subjects, safe=False)
 
 def show_teachers(request):
     """显示指定学科的老师"""

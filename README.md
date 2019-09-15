@@ -23,3 +23,18 @@ deepin: 更新后需要执行：
 46讲：　
     日志信息的配置  
     ORM操作优化  
+
+tip:   
+q: django Class 'User' has no 'objects' member  
+a: pip install pylint-django  
+
+
+pip install pylint-django　：vocode编程验证
+pip install bpmappers　：简化对象转成字典的操作 返回中文乱码 https://www.cnblogs.com/wf-skylark/p/9317096.html
+pip install django-cors-headers　：　跨域　https://www.cnblogs.com/randomlee/p/9752705.html
+
+
+４９　——　５５　没有更新
+restful　和　ｄｒｆ
+
+６６．爬虫开始
